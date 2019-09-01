@@ -1,0 +1,20 @@
+{
+  "name": "drumkit",
+  "version": "1.0.0",
+  "description": "simple javascript drumkit",
+  "main": "drumkit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-w-m/drumkit.git"
+  },
+  "author": "awm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-w-m/drumkit/issues"
+  },
+  "homepage": "https://github.com/a-w-m/drumkit#readme"
+}

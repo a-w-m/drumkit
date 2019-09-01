@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id ="drum-machine">
+    <div id = "display">drum machine</div>
+    <div id ="controls-wrapper">
+    <div id ="power-switch">
+      <div id = "power-slider">O</div>
+    </div>
+      <div id ="volume-wrapper">
+      <input type="range" id="volume-slider" min ="0" max="100"></input>
+      </div>
+    </div>
+    <div id ="drum-pad-wrapper">
+    <div id = "clap" class="drum-pad">Q
+      <audio id ="Q" class="clip" src="sounds/clap.wav" type = "audio/wav"></audio>
+    </div>
+    <div id ="hihat" class="drum-pad">W
+      <audio id ="W" class = "clip" src ="sounds/hihat.wav"></audio>
+    </div>
+    <div id ="kick" class="drum-pad">E
+      <audio id ="E" class="clip" src ="sounds/kick.wav"></audio>
+    </div>
+    <div id ="openhat" class="drum-pad">A
+        <audio id ="A" class="clip" src ="sounds/openhat.wav"></audio>
+    </div>
+    <div id ="boom" class="drum-pad">S
+        <audio id ="S" class="clip" src ="sounds/boom.wav" type = "audio/wav"></audio>
+    </div>
+    <div id ="ride" class="drum-pad">D
+        <audio id ="D" class="clip" src ="sounds/ride.wav"></audio>
+    </div>
+    <div id ="snare" class="drum-pad">Z
+        <audio id ="Z" class="clip" src ="sounds/snare.wav"></audio>
+    </div>
+    <div id ="tom" class="drum-pad">X
+        <audio id ="X" class="clip" src ="sounds/tom.wav"></audio>
+    </div>
+    <div id ="tink" class="drum-pad">C
+        <audio id ="C" class="clip" src ="sounds/tink.wav"></audio>
+    </div>
+    <div class = "offset"></div>
+    </div>
+  </div>
+
+<script src="drumkit.js">
+</script>
+
+
+</body>
+</html>

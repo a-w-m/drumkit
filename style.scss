@@ -1,0 +1,245 @@
+@mixin top-row {
+  background: #66c728; 
+}
+
+@mixin middle-row{
+  background: #FF7038;
+}
+
+@mixin bottom-row{
+  background:  #FF54F6;
+}
+
+@mixin on-click{
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+@mixin drum-pad {
+  display: flex;
+    border: .5rem solid #2B3940;
+    font-size: 1.5rem;
+    transition: all .07s ease;
+    color: white;
+    text-shadow: .35rem 0 .5rem #2B3940;
+    flex: 0 0 25%;
+    height: 10.5rem;
+    width: 7rem;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: .25rem .25rem .25rem .25rem #0d0d0d;
+    border-radius:1.5rem;
+  
+}
+
+@mixin slider{
+ border: .5rem solid #2B3840 ;
+ ;
+ height: 3rem;
+ width: 1.25rem;
+ border-radius: .1rem;
+ background: #222D33;
+ box-shadow: .01rem .01rem .01rem #000000, 0rem 0rem .01rem #0d0d0d; /* Add cool effects to your sliders! */
+ cursor: pointer;
+ 
+}
+
+@mixin slider-track{
+  background: #0d0d0d;
+  height: 3rem;
+  box-shadow: .55rem .55rem .55rem .55rem #0d0d0d;
+  background: #293799;
+  //border: 1.10rem solid #2B3940;
+  border-radius: .5rem;
+
+}
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+
+    
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    min-width: 100%;
+    background: #2B3840;
+  
+  }
+  
+
+  
+  #drum-machine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;  
+    min-height: 100%;
+    background: #192024;
+    border: .55rem solid  #2B3940;
+    border-radius: 1.5rem;  
+    
+  }
+
+  #display{
+    display: flex;
+    flex: 0 0 75%;
+    justify-content: center;
+    font-Size: 4.5rem;
+    min-width: 75%;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: white;
+    border-radius: .5rem;
+    background: #6C818C;
+    height: 10rem;
+    align-items: center;
+    
+    
+   
+   
+    
+  }
+  #controls-wrapper{
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    align-items: flex-end;
+    
+
+    
+  
+  }
+
+  #power-switch{
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 10rem;
+    background: #2B3840;
+    height: 3rem;
+    box-shadow: .75rem .75rem .75rem .75rem #0d0d0d;
+    border: 0rem solid #2B3940;
+    border-radius: .5rem;
+    
+    
+    
+  }
+
+  #power-slider{
+    display: flex;
+    background: #ffc600;
+    flex: 0 0 50%;
+    height: auto;
+    font-size: 3.25rem;
+    font-weight: 600;
+    -webkit-transition: .4s;
+    transition: .4s;
+    transform: translateX(0rem);
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    
+
+    
+    
+    }
+
+    #volume-wrapper{
+      height: 3rem;
+      flex: 0 0 50%;
+     border-radius: 1.5rem;
+      background: transparent;
+    }
+
+  #volume-slider{
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+  }
+
+  #volume-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    @include slider;
+    
+  }
+
+  #volume-slider::-moz-range-thumb{
+    @include slider;
+  }
+
+  #volume-slider::-ms-thumb{
+    @include slider;
+  }
+
+  #volume-slider::-webkit-slider-runnable-track{
+    @include slider-track;
+    
+
+  }
+
+  #drum-pad-wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+        width: 100%;
+    flex: 1 0 100%;
+  
+    
+     
+  }
+  
+  .drum-pad {
+    @include drum-pad;
+
+
+  
+  }
+  
+  // .drum-pad:active{
+  //   @include on-click;
+  // }
+  .drum-pad:focus{
+    @include on-click;
+  }
+  
+  
+  #clap, #hihat, #kick{
+    @include top-row;
+    
+  }
+
+  #openhat, #boom, #ride{
+    @include middle-row;
+  }
+
+  #snare, #tom, #tink{
+    @include bottom-row;
+  }
+
+  .playing{
+    @include on-click;
+  }
+
+
+.offset{
+  flex: 0 0 100%;
+  height: 2.5rem;
+}
