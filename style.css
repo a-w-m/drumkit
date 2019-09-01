@@ -161,6 +161,7 @@ body {
   margin-bottom: 1rem;
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0d0d0d;
   border-radius: 1.5rem;
+  touch-action: manipulation;
 }
 
 .drum-pad:focus {

@@ -208,6 +208,7 @@ html {
   
   .drum-pad {
     @include drum-pad;
+    touch-action: manipulation;
 
 
   
