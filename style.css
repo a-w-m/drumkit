@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
@@ -17,7 +18,7 @@ body {
   align-items: center;
   min-height: 100%;
   min-width: 100%;
-  background: #2B3840;
+  background: #2b3840;
 }
 
 #drum-machine {
@@ -27,22 +28,28 @@ body {
   width: 90%;
   min-height: 100%;
   background: #192024;
-  border: 0.55rem solid #2B3940;
+  border: 0.55rem solid #2b3940;
   border-radius: 1.5rem;
+}
+@media (min-width: 1200px) {
+  #drum-machine {
+    width: 50%;
+    max-height: 50%;
+  }
 }
 
 #display {
   display: flex;
   flex: 0 0 75%;
   justify-content: center;
-  font-Size: 4.5rem;
+  font-size: 4.5rem;
   min-width: 75%;
   margin-bottom: 5rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: white;
   border-radius: 0.5rem;
-  background: #6C818C;
+  background: #6c818c;
   height: 10rem;
   align-items: center;
 }
@@ -59,10 +66,10 @@ body {
   display: flex;
   justify-content: flex-end;
   flex: 0 0 10rem;
-  background: #2B3840;
+  background: #2b3840;
   height: 3rem;
   box-shadow: 0.75rem 0.75rem 0.75rem 0.75rem #0d0d0d;
-  border: 0rem solid #2B3940;
+  border: 0rem solid #2b3940;
   border-radius: 0.5rem;
 }
 
@@ -96,33 +103,33 @@ body {
 
 #volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 0.5rem solid #2B3840;
+  border: 0.5rem solid #2b3840;
   height: 3rem;
   width: 1.25rem;
   border-radius: 0.1rem;
-  background: #222D33;
+  background: #222d33;
   box-shadow: 0.01rem 0.01rem 0.01rem #000000, 0rem 0rem 0.01rem #0d0d0d;
   /* Add cool effects to your sliders! */
   cursor: pointer;
 }
 
 #volume-slider::-moz-range-thumb {
-  border: 0.5rem solid #2B3840;
+  border: 0.5rem solid #2b3840;
   height: 3rem;
   width: 1.25rem;
   border-radius: 0.1rem;
-  background: #222D33;
+  background: #222d33;
   box-shadow: 0.01rem 0.01rem 0.01rem #000000, 0rem 0rem 0.01rem #0d0d0d;
   /* Add cool effects to your sliders! */
   cursor: pointer;
 }
 
 #volume-slider::-ms-thumb {
-  border: 0.5rem solid #2B3840;
+  border: 0.5rem solid #2b3840;
   height: 3rem;
   width: 1.25rem;
   border-radius: 0.1rem;
-  background: #222D33;
+  background: #222d33;
   box-shadow: 0.01rem 0.01rem 0.01rem #000000, 0rem 0rem 0.01rem #0d0d0d;
   /* Add cool effects to your sliders! */
   cursor: pointer;
@@ -147,11 +154,11 @@ body {
 
 .drum-pad {
   display: flex;
-  border: 0.5rem solid #2B3940;
+  border: 0.5rem solid #2b3940;
   font-size: 1.5rem;
   transition: all 0.07s ease;
   color: white;
-  text-shadow: 0.35rem 0 0.5rem #2B3940;
+  text-shadow: 0.35rem 0 0.5rem #2b3940;
   flex: 0 0 25%;
   height: 10.5rem;
   width: 7rem;
@@ -170,16 +177,22 @@ body {
   box-shadow: 0 0 1rem #ffc600;
 }
 
-#clap, #hihat, #kick {
+#clap,
+#hi-hat,
+#kick {
   background: #66c728;
 }
 
-#openhat, #boom, #ride {
-  background: #FF7038;
+#open-hat,
+#boom,
+#ride {
+  background: #ff7038;
 }
 
-#snare, #tom, #tink {
-  background: #FF54F6;
+#snare,
+#tom,
+#tink {
+  background: #ff54f6;
 }
 
 .playing {
