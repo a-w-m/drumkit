@@ -3,8 +3,8 @@
     @content;
   }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
+@mixin for-phone-landscape-up {
+  @media (min-width: 600px) and (max-width:899px) {
     @content;
   }
 }
@@ -78,6 +78,10 @@
   background: #222d33;
   box-shadow: 0.01rem 0.01rem 0.01rem #000000, 0rem 0rem 0.01rem #0d0d0d; /* Add cool effects to your sliders! */
   cursor: pointer;
+
+  @include for-desktop-up{
+    height: 2.5rem;
+  }
 }
 
 @mixin slider-track {
@@ -87,6 +91,16 @@
   background: #293799;
   //border: 1.10rem solid #2B3940;
   border-radius: 0.5rem;
+
+  @include for-desktop-up{
+    height: 2.5rem;
+    
+  }
+
+  @include for-phone-landscape-up{
+
+  }
+
 }
 html,
 body {
@@ -109,6 +123,10 @@ body {
   min-height: 100%;
   min-width: 100%;
   background: #2b3840;
+
+  @include for-phone-landscape-up{
+   
+  }
 }
 
 #drum-machine {
@@ -122,9 +140,19 @@ body {
   border-radius: 1.5rem;
 
   @include for-desktop-up{
-    width: 50%;
-    max-height: 50%;
-  }
+    width: 40%;
+ }
+
+ @include for-phone-landscape-up{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+    width: 90%;
+    background:red;
+    
+    
+ }
 }
 
 #display {
@@ -141,6 +169,21 @@ body {
   background: #6c818c;
   height: 10rem;
   align-items: center;
+
+  @include for-desktop-up{
+   height: 7rem;
+   font-size: 3rem;
+   margin-bottom:  3rem;
+  }
+
+@include for-phone-landscape-up{
+  flex: 0 0 25%;
+  min-width: 40%;
+  max-width: 40%;
+  margin: 0 0;
+  font-size: 2.5rem;
+}
+
 }
 #controls-wrapper {
   display: flex;
@@ -148,6 +191,23 @@ body {
   justify-content: space-around;
   margin-bottom: 5rem;
   align-items: flex-end;
+
+  @include for-desktop-up{
+   margin-bottom: 2rem;
+   align-items: center; 
+   
+  }
+
+  @include for-phone-landscape-up{
+    flex-basis: 20%;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    flex-wrap: wrap;
+    width: 20rem;
+    margin-bottom: 0rem;
+    
+  }
 }
 
 #power-switch {
@@ -159,6 +219,17 @@ body {
   box-shadow: 0.75rem 0.75rem 0.75rem 0.75rem #0d0d0d;
   border: 0rem solid #2b3940;
   border-radius: 0.5rem;
+
+  @include for-desktop-up{
+    height: 3rem;
+    
+  }
+
+  @include for-phone-landscape-up{
+    flex: 0 0 50%;
+    order: 1;
+  }
+
 }
 
 #power-slider {
@@ -174,6 +245,13 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
+
+  @include for-desktop-up{
+    font-size: 2.5rem;
+    font-weight: 800;
+    height: 3rem; 
+       
+  }
 }
 
 #volume-wrapper {
@@ -181,6 +259,17 @@ body {
   flex: 0 0 50%;
   border-radius: 1.5rem;
   background: transparent;
+
+  @include for-desktop-up{
+    flex: 0 0 40%;  
+  }
+  
+  @include for-phone-landscape-up{
+    flex: 0 0 80%;
+    order: 0;
+    margin-bottom: 2rem;
+  }
+
 }
 
 #volume-slider {
@@ -213,11 +302,36 @@ body {
   justify-content: space-evenly;
   width: 100%;
   flex: 1 0 100%;
+
+  @include for-desktop-up{
+    max-width: 100%;
+    flex-basis: 100%;
+    
+  }
+
+  @include for-phone-landscape-up{
+    flex-basis: 100%;
+    width: 50%;
+  }
+
 }
 
 .drum-pad {
   @include drum-pad;
   touch-action: manipulation;
+
+  @include for-desktop-up{
+    width: 3rem;
+    height: 6rem;
+    flex: 0 0 25%;
+    
+  }
+
+  @include for-phone-landscape-up{
+    flex-basis: 25%;
+    width: 2rem;
+    height: 6rem;
+  }
 }
 
 // .drum-pad:active{
@@ -243,6 +357,10 @@ body {
 #tom,
 #tink {
   @include bottom-row;
+  @include for-desktop-up{
+    margin-bottom: 0rem;  
+  }
+
 }
 
 .playing {
@@ -252,4 +370,8 @@ body {
 .offset {
   flex: 0 0 100%;
   height: 2.5rem;
+
+  @include for-phone-landscape-up{
+    display: none;
+  }
 }
